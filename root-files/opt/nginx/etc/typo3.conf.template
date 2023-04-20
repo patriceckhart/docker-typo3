@@ -122,5 +122,5 @@ gzip_min_length 256;
 gzip_disable "MSIE [1-6]\.";
 gzip_static on;
 access_log off;
-fastcgi_cache_path /etc/nginx-cache levels=1:2 keys_zone=typo3:10m max_size=${NGINX_CLIENT_BODY_SIZE};
-fastcgi_cache_key \${DOLLAR}request_method\${DOLLAR}scheme\${DOLLAR}host\${DOLLAR}request_uri;
+# fastcgi_cache_path /etc/nginx-cache levels=1:2 keys_zone=typo3:10m max_size=${NGINX_CLIENT_BODY_SIZE};
+# fastcgi_cache_key \${DOLLAR}request_method\${DOLLAR}scheme\${DOLLAR}host\${DOLLAR}request_uri;
