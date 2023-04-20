@@ -103,7 +103,7 @@ server {
       fastcgi_connect_timeout 240s;
       fastcgi_read_timeout 240s;
       fastcgi_send_timeout 240s;
-      fastcgi_pass         typo3:9000;
+      fastcgi_pass unix:/var/run/php-fpm.sock;
       fastcgi_index        index.php;
       include              fastcgi.conf;
   }
