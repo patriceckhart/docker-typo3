@@ -109,7 +109,7 @@ server {
   }
 
   # Include own nginx server block configuration (Github repository)
-  include /data/neos/nginx/*.conf;
+  include /application/nginx/*.conf;
 }
 
 disable_symlinks off;
