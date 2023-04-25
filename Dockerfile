@@ -6,7 +6,7 @@ ENV HOME /application
 RUN set -x \
 	&& apk update \
 	&& apk add bash \
-	&& apk add nano gettext git nginx tar curl postfix mariadb-client optipng freetype libjpeg-turbo-utils icu-dev openssh pwgen build-base && apk add --virtual libtool freetype-dev libpng-dev libjpeg-turbo-dev yaml-dev libssh2-dev php81-pecl-igbinary \
+	&& apk add nano gettext git nginx tar curl postfix mariadb-client optipng freetype libjpeg-turbo-utils icu-dev openssh pwgen build-base && apk add --virtual libtool freetype-dev libpng-dev libjpeg-turbo-dev yaml-dev libssh2-dev php81-pecl-igbinary graphicsmagick \
 	&& docker-php-ext-configure gd --with-freetype --with-jpeg \
 	&& docker-php-ext-install \
 		gd \

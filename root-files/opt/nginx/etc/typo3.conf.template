@@ -93,6 +93,11 @@ server {
       try_files ${DOLLAR}uri ${DOLLAR}uri/ /index.php${DOLLAR}is_args${DOLLAR}args;
   }
 
+  # location /typo3/ {
+  #     absolute_redirect off;
+  #     try_files ${DOLLAR}uri /typo3/index.php${DOLLAR}is_args${DOLLAR}args;
+  # }
+
   location ~ [^/]\.php(/|${DOLLAR}) {
       fastcgi_split_path_info ^(.+?\.php)(/.*)${DOLLAR};
       if (!-f ${DOLLAR}document_root${DOLLAR}fastcgi_script_name) {
