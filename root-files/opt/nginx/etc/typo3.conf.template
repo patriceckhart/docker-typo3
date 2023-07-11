@@ -13,7 +13,7 @@ server {
 
   index index.php;
 
-  location ~* \.(?:jpe?g|gif|png|ico|swf|svg|eot|ttf|otf|woff2?|htc)$ {
+  location ~* \.(?:jpe?g|gif|png|webp|ico|swf|svg|eot|ttf|otf|woff2?|htc)$ {
     expires max;
   }
 
@@ -89,9 +89,9 @@ server {
       deny all;
   }
 
-  location / {
-      try_files ${DOLLAR}uri ${DOLLAR}uri/ /index.php${DOLLAR}is_args${DOLLAR}args;
-  }
+  # location / {
+  #     try_files ${DOLLAR}uri ${DOLLAR}uri/ /index.php${DOLLAR}is_args${DOLLAR}args;
+  # }
 
   # location /typo3/ {
   #     absolute_redirect off;
